@@ -3,17 +3,12 @@ from django.db import models
 
 
 
-
-
-
 class Courses(models.Model):
     photo = models.ImageField(upload_to='images/')
     name = models.CharField(max_length=250)
     text = models.TextField()
     price = models.BigIntegerField()
-    time = models.CharField(max_length=250)
-    duration = models.CharField(max_length=250)
-    discount = models.CharField(max_length=250)
+
 
     def __str__(self):
         return self.name
@@ -22,7 +17,7 @@ class Courses(models.Model):
 
 
 class Users(models.Model):
-    courses = models.ForeignKey(Courses, on_delete=models.RESTRICT)
+    courses = models.ForeignKey(Courses, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
     email = models.EmailField(max_length=250)
     number =  models.CharField(max_length=250)
@@ -50,6 +45,10 @@ class Teachers(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+
 
 
 class News(models.Model):
