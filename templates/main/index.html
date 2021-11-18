@@ -622,7 +622,7 @@
                         </div>
                         <div class="col-sm-6 col-md-4 maxwidth500 mb-sm-0 wow fadeInUp" data-margin-top="-160px"
                              data-wow-duration="1s" data-wow-delay="0.1s">
-                            <img class="img-fullwidth" src="{% static "images/services/bg-3.jpg" %}" alt="">
+                            <img class="img-fullwidth"  src="{% static "images/services/bg-3.jpg" %}" alt="">
                             <div class="bg-silver-light border-1px p-20 pt-0 pb-30">
                                 <h4 class=" letter-space-1 mt-10">Muvaffaqiyat<span
                                         class="text-theme-color-2"> Omillari</span></h4>
@@ -1007,10 +1007,10 @@
                                         <div class="entry-meta mt-0 no-bg no-border">
                                             <div class="event-content">
                                                 <h4 style="height: 30px" class="entry-title text-white text-capitalize m-0"><a
-                                                        href="#" >{{ new.name }}</a></h4>
+                                                        href="#" >{{ new.name|truncatechars:"30"}}</a></h4>
                                             </div>
                                         </div>
-                                        <p class="mt-10" style="height: 200px">{{ new.text }}</p>
+                                        <p class="mt-10" style="height: 200px">{{ new.text|truncatechars:'300' }}</p>
                                         <div class="clearfix"></div>
                                     </div>
                                 </article>
@@ -1103,7 +1103,7 @@
                 <div class="row">
                     <div  class="col-md-6">
                         <p  class="font-11 text-black-777 m-0" >
-                             <a  style="font-size: 15px;  text-align: center; color: white;"  target="_blank" href="">сделано в QWERTY AL-FAJR</a>
+                             <a  style="font-size: 15px;  text-align: center; color: white;"  target="_blank" href="">Ishlab chiquvchi QWERTY AL-FAJR</a>
                         </p>
                     </div>
                 </div>
